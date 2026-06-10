@@ -1,0 +1,35 @@
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        int l=0;
+        int t=0;
+        int r=matrix[0].length-1;
+        int b=matrix.length-1;
+        List ans=new ArrayList<>();
+        while(t<=b && l<=r){
+        for(int i=l;i<=r;i++){
+            ans.add(matrix[t][i]);    
+        }
+        t++;
+
+        for(int i=t;i<=b;i++){
+           ans.add(matrix[i][r]);
+        }
+        r--;
+    if(t<=b){
+        for(int i=r;i>=l;i--){
+            ans.add(matrix[b][i]);
+        }
+    
+        b--;
+    }
+
+    if(l<=r){
+        for(int i=b;i>=t;i--){
+            ans.add(matrix[i][l]);
+        }
+        l++;
+        }
+        }
+        return ans;
+    }
+}

@@ -1,6 +1,6 @@
 
 
 ## <h6>About</h6>
-LeetCode Solutions
+LeetCode Solutions (Java)
 
 
